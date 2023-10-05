@@ -8,7 +8,6 @@ import pandas as pd
 model = pickle.load(open("hatespeech_model.pkl", "rb"))
 tfidf_vectorizer = pickle.load(open('tfidf_vectorizer.pkl' , 'rb'))
 
-
 @app.route('/')
 def hell_world():
     return render_template('index.html')
