@@ -27,8 +27,9 @@ def result():
         resData = "NO HATE"
     elif label == 1.0:
         resData ="HATE COMMENT!" 
-    else:
+    elif label == 2.0:
         resData = "OFFENSIVE"
+        
     # Process the model's prediction
     print("RESULT IS" , resData)
     return render_template('index.html' , result=resData )
