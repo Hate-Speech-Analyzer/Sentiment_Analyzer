@@ -34,7 +34,9 @@ def result():
     print("RESULT IS" , resData)
     return render_template('index.html' , result=resData )
 
+# Get the port from the PORT environment variable, default to 5000 if not set
+port = int(os.environ.get("PORT", 5000))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=port)
 
